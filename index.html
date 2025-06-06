@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeliVibe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="header">
+      <div class="container header-container">
+        <img src="Recurso 2@4x.png" alt="Logo DeliVibe" class="logo">
+        <nav class="navbar">
+          <ul>
+            <li><a href="batidos.html">Batidos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+   <main class="main container">
+      <section class="products">
+        <h1>Postres</h1>
+        <div class="product-list">
+          <!-- Producto 1 -->
+          <div class="product">
+            <img src="Copia de Brownies.jpg" alt="Brownie">
+            <h3>Brownie</h3>
+            <p>12 bs</p>
+            <button class="add-to-cart" data-title="Brownie" data-price="12">Agregar</button>
+          </div>
+          <div class="product">
+            <img src="Copia de Galletas 1.jpg" alt="Brownie" />
+            <h3>Galletas</h3>
+            <p>7 bs</p>
+            <button class="add-to-cart" data-id="1" data-title="Brownie" data-price="7" data-image="assets/Brownies.jpg">Agregar</button>
+          </div>
+          <div class="product">
+            <img src="Copia de Cupkakes.jpg" alt="Brownie" />
+            <h3>Cupcakes</h3>
+            <p>8 bs</p>
+            <button class="add-to-cart" data-id="1" data-title="Brownie" data-price="8" data-image="assets/Brownies.jpg">Agregar</button>
+          </div>
+          <div class="product">
+            <img src="Copia de pastel de almendras.jpg" alt="Brownie" />
+            <h3>Pastel de almendras</h3>
+            <p>12 bs</p>
+            <button class="add-to-cart" data-id="1" data-title="Brownie" data-price="12" data-image="assets/Brownies.jpg">Agregar</button>
+          </div>
+          <div class="product">
+            <img src="Copia de Galletas con chispas de chocolate.jpg" alt="Brownie" />
+            <h3>Galletas de chocolate</h3>
+            <p>8 bs</p>
+            <button class="add-to-cart" data-id="1" data-title="Brownie" data-price="8" data-image="assets/Brownies.jpg">Agregar</button>
+          </div>
+          <div class="product">
+            <img src="Bizcochos.jpg" alt="Brownie" />
+            <h3>Bizcochos</h3>
+            <p>10 bs</p>
+            <button class="add-to-cart" data-id="1" data-title="Brownie" data-price="10" data-image="assets/Brownies.jpg">Agregar</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="cart" id="cart">
+        <h2>Carrito</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Quitar</th>
+            </tr>
+          </thead>
+          <tbody id="cart-items"></tbody>
+        </table>
+        <p class="total">Total: <span id="total">0.00</span> bs</p>
+
+        <button id="clear-cart">Vaciar carrito</button>
+
+        <form id="payment-form" class="payment-form" novalidate>
+          <h3>Pagar con tarjeta</h3>
+
+          <label for="card-number">Número de tarjeta</label>
+          <input
+            type="text"
+            id="card-number"
+            name="card-number"
+            maxlength="19"
+            placeholder="XXXX XXXX XXXX XXXX"
+            pattern="[\d\s]{13,19}"
+            autocomplete="cc-number"
+            required
+          />
+
+          <label for="card-code">Código de seguridad (CVV)</label>
+          <input
+            type="text"
+            id="card-code"
+            name="card-code"
+            maxlength="4"
+            placeholder="XXX"
+            pattern="\d{3,4}"
+            autocomplete="cc-csc"
+            required
+          />
+
+          <label for="expiry-date">Fecha de caducidad</label>
+          <input
+            type="month"
+            id="expiry-date"
+            name="expiry-date"
+            min="2023-06"
+            max="2035-12"
+            required
+          />
+
+          <label for="card-owner">Nombre del dueño de la tarjeta</label>
+          <input
+            type="text"
+            id="card-owner"
+            name="card-owner"
+            placeholder="Nombre completo"
+            autocomplete="cc-name"
+            required
+          />
+
+          <button type="submit" id="pay-btn">Pagar</button>
+        </form>
+      </aside>
+  </div>
+
+<body>
+  <header class="header"></header>
+
+  <main class="main container">
+    <section class="products"></section>
+  </main>
+
+<footer>
+  <h2>Subscribe</h2>
+  <form class="subscribe-form">
+    <input type="text" placeholder="Full Name" required />
+    <input type="tel" placeholder="Phone Number" required />
+    <input type="email" placeholder="Email" required />
+    <div class="form-group">
+      <label>Fecha de nacimiento</label>
+      <div class="dob-selectors">
+        <select id="dob-day" name="dob-day" required></select>
+        <select id="dob-month" name="dob-month" required>
+          <option value="">Mes</option>
+          <option value="1">Enero</option>
+          <option value="2">Febrero</option>
+          <option value="3">Marzo</option>
+          <option value="4">Abril</option>
+          <option value="5">Mayo</option>
+          <option value="6">Junio</option>
+          <option value="7">Julio</option>
+          <option value="8">Agosto</option>
+          <option value="9">Septiembre</option>
+          <option value="10">Octubre</option>
+          <option value="11">Noviembre</option>
+          <option value="12">Diciembre</option>
+        </select>
+        <select id="dob-year" name="dob-year" required></select>
+      </div>
+    </div>
+    <button type="submit">Suscribirse</button>
+  </form>
+</footer>
+
+  <script src="carrito.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const daySelect = document.getElementById("dob-day");
+      for (let i = 1; i <= 31; i++) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.textContent = i;
+        daySelect.appendChild(option);
+      }
+
+      const yearSelect = document.getElementById("dob-year");
+      for (let y = 1930; y <= 2025; y++) {
+        const option = document.createElement("option");
+        option.value = y;
+        option.textContent = y;
+        yearSelect.appendChild(option);
+      }
+    });
+  </script>
+</body>
+</html>
